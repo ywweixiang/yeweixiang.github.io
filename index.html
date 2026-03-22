@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叶韦翔的个人主页</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .lang-switch { text-align: right; margin-bottom: 30px; }
+        .lang-switch button { padding: 8px 16px; background: #0366d6; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .lang-switch button:hover { background: #005cc5; }
+        .section { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e1e4e8; }
+        h1 { color: #24292e; margin-bottom: 10px; }
+        h2 { color: #24292e; margin: 20px 0 10px; font-size: 1.5em; }
+        p, li { color: #586069; line-height: 1.6; font-size: 1.1em; }
+        ul { list-style: none; padding-left: 20px; }
+        ul li::before { content: "•"; color: #0366d6; display: inline-block; width: 1em; margin-left: -1em; }
+        .update-time { color: #6a737d; font-size: 0.9em; margin-top: 20px; }
+        #en-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch"><button id="langBtn">English</button></div>
+
+        <!-- 中文内容 -->
+        <div id="zh-content">
+            <h1>叶韦翔</h1>
+            <p>华东政法大学 | Python语言与数据结构相关专业</p>
+            <p>研究兴趣/职业方向：数据结构与算法、Python软件开发、数据分析</p>
+            <p>联系方式：3454650245@qq.com</p>
+
+            <div class="section">
+                <h2>个人简介</h2>
+                <p>就读于华东政法大学，专注于Python编程与数据结构领域，具备扎实的编程基础与逻辑思维能力。熟练掌握线性表、树、图等核心数据结构，能够独立完成算法设计与代码实现。学习态度严谨，热爱技术分享，目标在软件工程/数据算法方向深耕发展。</p>
+            </div>
+
+            <div class="section">
+                <h2>核心技能</h2>
+                <ul>
+                    <li>编程：Python基础与进阶、数据结构算法实现、文件操作与异常处理</li>
+                    <li>技术：面向对象编程、模块化开发、基础调试技巧</li>
+                    <li>通用：逻辑思维、代码优化、学习总结与技术文档撰写</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>教育/课程经历</h2>
+                <p>教育经历：2021.09-2025.06 华东政法大学 相关专业（本科）</p>
+                <p>核心课程：数据结构、Python程序设计、算法分析、计算机基础</p>
+            </div>
+
+            <p class="update-time">最后更新日期：2026-03-22</p>
+        </div>
+
+        <!-- 英文内容 -->
+        <div id="en-content">
+            <h1>Ye Weixiang</h1>
+            <p>East China University of Political Science and Law | Major in Python & Data Structures</p>
+            <p>Research Interests / Career Direction: Data Structures & Algorithms, Python Software Development, Data Analysis</p>
+            <p>Contact: 3454650245@qq.com</p>
+
+            <div class="section">
+                <h2>About Me</h2>
+                <p>Studying at East China University of Political Science and Law, focusing on Python programming and data structures. I have a solid programming foundation and logical thinking ability. Proficient in core data structures such as linear tables, trees, and graphs. I am rigorous in learning, passionate about technical sharing, and aim to develop in the direction of software engineering/data algorithms.</p>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Coding: Python Basic & Advanced, Data Structure Algorithm Implementation, File Operations & Exception Handling</li>
+                    <li>Technology: OOP, Modular Development, Basic Debugging Skills</li>
+                    <li>General: Logical Thinking, Code Optimization, Learning Summary & Technical Documentation</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Education/Course Experience</h2>
+                <p>Education: Sep 2021 - Jun 2025 East China University of Political Science and Law, Bachelor of Related Major</p>
+                <p>Core Courses: Data Structures, Python Programming, Algorithm Analysis, Computer Fundamentals</p>
+            </div>
+
+            <p class="update-time">Last Updated: 2026-03-22</p>
+        </div>
+    </div>
+
+    <script>
+        // 中英切换核心逻辑
+        const langBtn = document.getElementById('langBtn');
+        const zhContent = document.getElementById('zh-content');
+        const enContent = document.getElementById('en-content');
+
+        langBtn.addEventListener('click', function() {
+            if (zhContent.style.display === 'none') {
+                // 切回中文
+                zhContent.style.display = 'block';
+                enContent.style.display = 'none';
+                langBtn.textContent = 'English';
+            } else {
+                // 切换到英文
+                zhContent.style.display = 'none';
+                enContent.style.display = 'block';
+                langBtn.textContent = '中文';
+            }
+        });
+    </script>
+</body>
+</html>
